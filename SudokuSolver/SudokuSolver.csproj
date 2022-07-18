@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net5.0\SudokuEasy.txt" />
+    <Content Include="bin\Debug\net5.0\SudokuHard.txt" />
+    <Content Include="bin\Debug\net5.0\SudokuMedium.txt" />
+    <Content Include="bin\Debug\net5.0\SudokuSolver.deps.json" />
+    <Content Include="bin\Debug\net5.0\SudokuSolver.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\net5.0\SudokuSolver.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\SudokuSolver.dll" />
+    <None Include="bin\Debug\net5.0\SudokuSolver.exe" />
+    <None Include="bin\Debug\net5.0\SudokuSolver.pdb" />
+  </ItemGroup>
+
+</Project>
