@@ -17,13 +17,14 @@ namespace SudokuSolver
                 SudokuBoardDisplayer sudokuBoardDisplayer = new SudokuBoardDisplayer();
 
                 bool runProgram = true;
+                string answer = "";
 
-                do
+                while (runProgram)
                 {
                     Console.WriteLine("Welcome to the Sudoku Puzzle Program\n");
                     Console.WriteLine("Please enter the filename containing the Sudoku Puzzle:");
                     var filename = Console.ReadLine();
-                    string answer = "";
+                    
 
                     var sudokuBoard = sudokuFileReader.ReadFile(filename);
                     sudokuBoardDisplayer.Display("Initial State", sudokuBoard);
@@ -37,33 +38,19 @@ namespace SudokuSolver
 
                     Console.WriteLine("Would you like to try another Sudoku Puzzel? [Y or N]\n");
                     answer = Console.ReadLine().ToUpper();
-
                     if (answer == "Y")
                     {
                         runProgram = true;
                     }
-                    else if (answer == "N")
+                    else
                     {
-                        Console.WriteLine("\nThank you for using the Sudoku Puzzle Program. Good-Bye.");
                         runProgram = false;
                     }
-                    else 
-                    {
-                        Console.WriteLine("\nPlease press Y for Yes or N for No\n");
-                        answer = Console.ReadLine().ToUpper();
-                        if (answer == "Y")
-                        {
-                            runProgram = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("\nThank you for using the Sudoku Puzzle Program. Good-Bye.");
-                            runProgram = false;
-                        }
-                    }
+                }
 
+                Console.WriteLine("Thanks for playing. Good-Bye.");
 
-                } while (runProgram);
+                
 
             }
             catch (Exception ex)
